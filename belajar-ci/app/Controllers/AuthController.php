@@ -26,10 +26,10 @@ class AuthController extends BaseController
 
             if ($this->validate($rules)) {
                 $username = $this->request->getVar('username');
-            $password = $this->request->getVar('password');
-            $role = $this->request->getVar('role');
+                $password = $this->request->getVar('password');
+                $role = $this->request->getVar('role');
 
-            $dataUser = $this->userModel ->where(['username' => $username])->first();
+                $dataUser = $this->userModel ->where(['username' => $username])->first();
             // $dataUser = ['username' => 'april', 'password' => '202cb962ac59075b964b07152d234b70', 'role' => 'admin', 'email' => 'april@example.com']; // passw 123
 
             if ($dataUser) {
